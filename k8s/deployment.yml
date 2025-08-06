@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stock-price-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stock-price
+  template:
+    metadata:
+      labels:
+        app: stock-price
+    spec:
+      containers:
+      - name: stock-price
+        image: bharadh548/stock-price-app
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000
+
