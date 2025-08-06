@@ -1,47 +1,80 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Gradient Background */
 body {
-    background: #f0f2f5;
-    font-family: 'Segoe UI', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  background: linear-gradient(to right, #74ebd5, #9face6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
 }
 
+/* Card UI */
 .container {
-    text-align: center;
-    padding: 2rem;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 400px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  text-align: center;
 }
 
-input {
-    padding: 0.6rem;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    width: 60%;
-    margin-top: 1rem;
+/* Heading */
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #222;
 }
 
+/* Input Field */
+input[type="text"] {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 12px;
+  width: 80%;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  background: #f4f4f4;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(100, 100, 255, 0.5);
+}
+
+/* Button */
 button {
-    padding: 0.6rem 1rem;
-    margin-left: 1rem;
-    border-radius: 10px;
-    background: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #56ccf2, #2f80ed);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
+button:hover {
+  background: linear-gradient(to right, #2f80ed, #56ccf2);
+  transform: scale(1.05);
+}
+
+/* Result Text */
 .result {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    color: green;
-}
-
-.error {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    color: red;
+  margin-top: 25px;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  border-radius: 10px;
 }
 
